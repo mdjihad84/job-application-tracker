@@ -55,7 +55,7 @@
         </div>
     </section>
 
-    <!-- == Job Interview area == -->
+    <!-- == Job Interview card top area == -->
     <section class="w-[1200px] mx-auto mt-14">
         <div class="">
             <h1 class="text-[#002C5C] text-2xl font-bold mb-6">Available Jobs</h1>
@@ -66,14 +66,13 @@
             <button class="filter-btn btn btn-soft btn-primary">Rejected</button>
         </div>
 
-        <!-- == Card Area == -->
 
-        <!-- Card 1 -->
+        <!-- ==  Job Interview card area == -->
 
         <div id="jobContainer" class="mt-8">
-    
+            <!-- Card 1 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -81,7 +80,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
                         <p class="text-gray-500 font-medium -mt-1">React Native Developer</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>Remote</span> • <span>Full-time</span> • <span>$130k - $175k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -95,8 +100,9 @@
                 </div>
             </div>
 
+             <!-- Card 2 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -104,7 +110,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">WebFlow Agency</h2>
                         <p class="text-gray-500 font-medium -mt-1">Web Designer</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>LA</span> • <span>Part-time</span> • <span>$80k - $120k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -118,8 +130,9 @@
                 </div>
             </div>
 
+             <!-- Card 3 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -127,7 +140,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">Tech Solutions</h2>
                         <p class="text-gray-500 font-medium -mt-1">Frontend Engineer</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>New York</span> • <span>Full-time</span> • <span>$110k - $150k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -141,8 +160,9 @@
                 </div>
             </div>
 
+             <!-- Card 4 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -150,7 +170,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">DataViz Analytics</h2>
                         <p class="text-gray-500 font-medium -mt-1">Backend Developer</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>Remote</span> • <span>Contract</span> • <span>$90k - $130k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -164,8 +190,9 @@
                 </div>
             </div>
 
+             <!-- Card 5 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -173,7 +200,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">Creative Pixel</h2>
                         <p class="text-gray-500 font-medium -mt-1">UI/UX Designer</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>London</span> • <span>Full-time</span> • <span>$70k - $95k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -187,8 +220,9 @@
                 </div>
             </div>
 
+             <!-- Card 6 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -196,7 +230,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">Green Fintech</h2>
                         <p class="text-gray-500 font-medium -mt-1">Full Stack Developer</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>Berlin</span> • <span>Full-time</span> • <span>$120k - $160k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -210,8 +250,9 @@
                 </div>
             </div>
 
+             <!-- Card 7 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -219,7 +260,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">Cloud Systems</h2>
                         <p class="text-gray-500 font-medium -mt-1">DevOps Engineer</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>San Francisco</span> • <span>Hybrid</span> • <span>$140k - $190k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -233,8 +280,9 @@
                 </div>
             </div>
 
+             <!-- Card 8 -->
             <div class="mt-10">
-                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative">
+                <div class="job-card card card-border bg-base-100 shadow-sm w-full mb-6 relative" data-category="not-applied">
                     <div class="card-body p-8">
                         <button class="btn-delete absolute top-6 right-6 text-gray-400 hover:text-error transition-colors">
                             <i class="fa-regular fa-trash-can text-lg"></i>
@@ -242,7 +290,13 @@
                         <h2 class="text-xl font-bold text-[#002C5C]">AI Innovations</h2>
                         <p class="text-gray-500 font-medium -mt-1">Machine Learning Eng.</p>
                         <div class="flex gap-4 text-gray-400 text-sm mt-3">
-                            <span>Remote</span> • <span>Full-time</span> • <span>$150k - $200k</span>
+                            <div class="flex items-center gap-3 text-gray-400 text-sm mt-3">
+                                <p>Remote</p>
+                                <span class="opacity-50">•</span>
+                                <p>Full-time</p>
+                                <span class="opacity-50">•</span>
+                                <p>$130k - $175k</p>
+                            </div>
                         </div>
                         <div class="mt-4">
                             <span class="status-tag bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold px-3 py-1 rounded uppercase">Not Applied</span>
@@ -256,8 +310,13 @@
                 </div>
             </div>
         </div>
+        <div id="emptyState" class="hidden text-center py-16">
+            <img src="https://cdn-icons-png.flaticon.com/512/7486/7486744.png"
+                class="w-32 mx-auto mb-6 opacity-70" />
+            <h2 class="text-xl font-bold text-gray-500">No Job Available</h2>
+            <p class="text-gray-400 mt-2">There is no job in this category.</p>
+        </div>
     </section>
-
     <script src="./script/app.js"></script>
 </body>
 </html>
