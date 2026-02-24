@@ -1,4 +1,3 @@
-
 let interviewCount = 0;
 let rejectedCount = 0;
 const jobStatus = {};
@@ -11,6 +10,7 @@ const totalCountElement = document.getElementById("totalCount");
 
 // Funtion update
 function updateUI() {
+
   const allCards = document.querySelectorAll(".job-card");
 
   interviewCountEl.innerText = interviewCount;
@@ -26,13 +26,25 @@ function updateUI() {
    else {
     emptyState.classList.add("hidden");
   }
+
+
+  const activeBtn = document.querySelector(".filter-btn.btn-active");
+  const filterValue = activeBtn ? activeBtn.innerText.toLowerCase() : "all";
+
+  const visibleCards = [...allCards].filter(
+    (card) => card.style.display !== "none",
+  );
+
+  const categoryCountEl = document.getElementById("categoryCount");
+
+  if (categoryCountEl) {
+    categoryCountEl.innerText = visibleCards.length;
+  }
 }
 
 // Interview Button
 document.addEventListener("click", function (e) {
-
   if (e.target.closest(".btn-interview")) {
-
     const button = e.target.closest(".btn-interview");
 
     const id = button.dataset.id;
@@ -54,13 +66,15 @@ document.addEventListener("click", function (e) {
       card.setAttribute("data-category", "interviewed");
 
       statusTag.innerText = "Interview";
+
       statusTag.className = "status-tag bg-green-100 text-green-600 text-xs font-bold px-3 py-1 rounded uppercase";
       updateUI();
     }
   }
 
-// Rejected Button
+  // Rejected Button
   if (e.target.closest(".btn-rejected")) {
+
     const button = e.target.closest(".btn-rejected");
     const id = button.dataset.id;
     const card = button.closest(".job-card");
@@ -71,8 +85,11 @@ document.addEventListener("click", function (e) {
     }
 
     if (jobStatus[id] !== "rejected") {
+
       rejectedCount++;
+
       jobStatus[id] = "rejected";
+
       card.setAttribute("data-category", "rejected");
 
       statusTag.innerText = "Rejected";
@@ -95,15 +112,16 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Filter method
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach((btn) => {
 
   btn.addEventListener("click", function () {
+
     filterButtons.forEach((b) =>
       b.classList.remove("btn-active", "btn-primary"),
     );
+
     this.classList.add("btn-active", "btn-primary");
 
     const filterValue = this.innerText.toLowerCase();
@@ -114,50 +132,38 @@ filterButtons.forEach((btn) => {
 
       if (filterValue === "all") {
         card.style.display = "block";
-
-      } else if (
+      }
+      else if (
         filterValue === "interview" &&
         cardCategory === "interviewed"
       )
-      {
+       {
         card.style.display = "block";
-      } 
-      else if (filterValue === "rejected" && cardCategory === "rejected") {
+      }
+       else if (filterValue === "rejected" && cardCategory === "rejected") {
         card.style.display = "block";
-
-      } else {
+      }
+       else {
         card.style.display = "none";
       }
     });
+
+    // visible card check 
+    const visibleCards = [...allJobCards].filter(
+      (card) => card.style.display !== "none",
+    );
+
+    const emptyState = document.getElementById("emptyState");
+
+    document.getElementById("categoryCount").innerText = visibleCards.length;
+
+    if (visibleCards.length === 0) {
+      emptyState.classList.remove("hidden");
+    }
+     else {
+      emptyState.classList.add("hidden");
+    }
   });
 });
+
 updateUI();
-
-// No Job 
-
-allJobCards.forEach((card) => {
-  const cardCategory = card.getAttribute("data-category");
-
-  if (filterValue === "all") {
-    card.style.display = "block";
-  } else if (filterValue === "interview" && cardCategory === "interviewed") {
-    card.style.display = "block";
-  } else if (filterValue === "rejected" && cardCategory === "rejected") {
-    card.style.display = "block";
-  } else {
-    card.style.display = "none";
-  }
-});
-
-// 👉 Visible card check
-const visibleCards = [...allJobCards].filter(
-  (card) => card.style.display !== "none",
-);
-
-const emptyState = document.getElementById("emptyState");
-
-if (visibleCards.length === 0) {
-  emptyState.classList.remove("hidden");
-} else {
-  emptyState.classList.add("hidden");
-}
